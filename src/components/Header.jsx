@@ -1,55 +1,65 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link } from "react-scroll";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 const Header = () => {
-  const [darkMode, setDarkMode] = useState(false);
-
-  useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  }, [darkMode]);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="bg-gray-800 text-white p-4 flex justify-between items-center">
-      <div className="text-xl font-bold">M-M A</div>
-      <nav className="hidden md:flex space-x-4">
-        <Link to="home" smooth={true} className="hover:underline">
-          Home
-        </Link>
-        <Link to="skills" smooth={true} className="hover:underline">
-          Skills
-        </Link>
-        <Link to="projects" smooth={true} className="hover:underline">
-          Projects
-        </Link>
-        <Link to="footer" smooth={true} className="hover:underline">
-          Contact
-        </Link>
-      </nav>
-      <div className="flex space-x-4 items-center">
-        <button onClick={() => setDarkMode(!darkMode)}>
-          {darkMode ? "🌞" : "🌙"}
-        </button>
-        <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-          <FaGithub />
-        </a>
-        <a
-          href="https://linkedin.com"
-          target="_blank"
-          rel="noopener noreferrer"
+    <header className="bg-gray-900 text-white shadow-md fixed w-full z-10 transition duration-300">
+      <div className="container mx-auto p-4 flex justify-between items-center">
+        <div className="text-2xl font-bold">M-M A</div>
+        <nav
+          className={`md:flex md:items-center md:space-x-6 ${
+            isOpen ? "block" : "hidden"
+          } w-full md:w-auto md:static absolute top-16 left-0 md:bg-transparent bg-gray-900`}
         >
-          <FaLinkedin />
-        </a>
+          <Link
+            to="home"
+            smooth={true}
+            className="block py-2 px-4 md:inline-block md:py-0 md:px-0 hover:text-gray-400 transition duration-300"
+            onClick={() => setIsOpen(false)}
+          >
+            Home
+          </Link>
+          <Link
+            to="skills"
+            smooth={true}
+            className="block py-2 px-4 md:inline-block md:py-0 md:px-0 hover:text-gray-400 transition duration-300"
+            onClick={() => setIsOpen(false)}
+          >
+            Skills
+          </Link>
+          <Link
+            to="projects"
+            smooth={true}
+            className="block py-2 px-4 md:inline-block md:py-0 md:px-0 hover:text-gray-400 transition duration-300"
+            onClick={() => setIsOpen(false)}
+          >
+            Projects
+          </Link>
+          <Link
+            to="footer"
+            smooth={true}
+            className="block py-2 px-4 md:inline-block md:py-0 md:px-0 hover:text-gray-400 transition duration-300"
+            onClick={() => setIsOpen(false)}
+          >
+            Contact
+          </Link>
+        </nav>
+        <div className="flex items-center space-x-4">
+          <button
+            className="md:hidden focus:outline-none"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {isOpen ? (
+              <FaTimes className="w-6 h-6" />
+            ) : (
+              <FaBars className="w-6 h-6" />
+            )}
+          </button>
+        </div>
       </div>
-      <button className="block md:hidden">
-        <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
-          <path d="M4 6h16M4 12h16m-7 6h7"></path>
-        </svg>
-      </button>
     </header>
   );
 };

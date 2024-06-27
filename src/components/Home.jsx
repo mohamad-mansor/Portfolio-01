@@ -16,7 +16,10 @@ const Home = () => {
           }}
         />
       </h2>
-      <button className="mt-6 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700">
+      <button
+        className="mt-6 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700"
+        onClick={() => (window.location.href = "mailto:m.m.alhajr@web.de")}
+      >
         Contact Me
       </button>
     </section>

@@ -22,19 +22,19 @@ const Projects = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {/* Add your project cards here */}
           <ProjectCard
-            image="project1.jpg"
-            github="https://github.com"
-            live="https://example.com"
+            image="https://raw.githubusercontent.com/mohamad-mansor/Snake-Game/main/images/snake-game.png"
+            github="https://github.com/mohamad-mansor/Snake-Game"
+            live="https://mohamad-mansor.github.io/Snake-Game/"
           />
           <ProjectCard
-            image="project2.jpg"
-            github="https://github.com"
-            live="https://example.com"
+            image="https://raw.githubusercontent.com/mohamad-mansor/Portfolio-00/main/Screenshot%20from%202024-02-07%2012-42-29.png"
+            github="https://github.com/mohamad-mansor/Portfolio-00"
+            live="https://mohamad-mansor.github.io/PORTFOLIO/"
           />
           <ProjectCard
-            image="project3.jpg"
-            github="https://github.com"
-            live="https://example.com"
+            image="https://raw.githubusercontent.com/mohamad-mansor/TO-DO-List/main/images/Screenshot%20from%202024-06-27%2012-33-49.png"
+            github="https://github.com/mohamad-mansor/TO-DO-List"
+            live="https://mohamad-mansor.github.io/TO-DO-List/"
           />
         </div>
       </div>

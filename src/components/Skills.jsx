@@ -1,3 +1,4 @@
+import Marquee from "react-fast-marquee";
 import {
   FaLinux,
   FaGit,
@@ -17,18 +18,20 @@ const Skills = () => {
       <div className="container mx-auto text-center">
         <h2 className="text-3xl font-bold mb-10">Skills</h2>
         <div className="marquee">
-          <div className="marquee-content flex space-x-8">
-            <FaLinux size={40} />
-            <FaGit size={40} />
-            <FaHtml5 size={40} />
-            <FaCss3Alt size={40} />
-            <FaBootstrap size={40} />
-            <SiTailwindcss size={40} />
-            <FaJs size={40} />
-            <FaReact size={40} />
-            <FaNode size={40} />
-            <FaFigma size={40} />
-          </div>
+          <Marquee>
+            <div className="marquee-content flex space-x-9">
+              <FaLinux size={40} />
+              <FaGit size={40} />
+              <FaHtml5 size={40} />
+              <FaCss3Alt size={40} />
+              <FaBootstrap size={40} />
+              <SiTailwindcss size={40} />
+              <FaJs size={40} />
+              <FaReact size={40} />
+              <FaNode size={40} />
+              <FaFigma size={40} />
+            </div>
+          </Marquee>
         </div>
       </div>
     </section>
