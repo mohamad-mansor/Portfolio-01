@@ -1,3 +1,4 @@
+//Pojects.jsx Component
 import { FaGithub, FaArrowRight } from "react-icons/fa";
 
 const ProjectCard = ({ image, github, live }) => (

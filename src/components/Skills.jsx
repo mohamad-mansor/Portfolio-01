@@ -1,3 +1,4 @@
+//skills.jsx Component
 import Marquee from "react-fast-marquee";
 import {
   FaLinux,

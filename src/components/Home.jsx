@@ -1,3 +1,4 @@
+//Home.jsx Component
 import Typewriter from "typewriter-effect";
 
 const Home = () => {
